@@ -37,4 +37,47 @@ if (overlay) {
 // Close menu when a navigation link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', closemenu);
+
+
+    const contactForm = document.getElementById('applicationForm'),
+      contactMessage = document.getElementById('contact-message'),
+      application = document.getElementById('form_container');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_vpnxvcc','template_q1fc6gh','#applicationForm','0KdQqaBVjNXYA7JzD')
+    .then(() => {
+        application.style.display = 'none';  // Hide the form
+        contactMessage.style.display = 'block'; // Show the message
+
+        setTimeout(() => {
+            contactMessage.style.display = 'none';
+            contactMessage.textContent = ''; // Clear the message text
+        }, 5000);
+
+        contactForm.reset();
+    })
+    .catch((error) => {
+        contactMessage.style.display = 'block'; // Show the message
+        contactMessage.innerHTML = '<img src="images/error.png" alt="Error"><span>Failed to send application. Please try again later.</span>';
+
+        setTimeout(() => {
+            contactMessage.style.display = 'none';
+            contactMessage.innerHTML = ''; // Clear the message text
+        }, 5000);
+    });
+};
+
+contactForm.addEventListener('submit', sendEmail);
 });
+
+
+
+
+
+
+
+
+
+
