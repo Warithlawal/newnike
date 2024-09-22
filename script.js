@@ -46,7 +46,7 @@ navLinks.forEach(link => {
 const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_vpnxvcc','template_q1fc6gh','#applicationForm','0KdQqaBVjNXYA7JzD')
+    emailjs.sendForm('service_4jx2s7s','template_tff3wnm','#applicationForm','KHPyCHp-9GG9RJMwb')
     .then(() => {
         application.style.display = 'none';  // Hide the form
         contactMessage.style.display = 'block'; // Show the message

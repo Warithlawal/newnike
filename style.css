@@ -513,6 +513,33 @@ hr {
 	color: #98a2aa;
 }
 
+.terms-head img {
+	width: 70px;
+}
+
+.terms-head {
+	text-align: center;
+	margin: 10px 0;
+}
+
+.terms-body {
+	margin: 50px;
+}
+
+.terms-body p {
+	padding: 10px 0;
+	font-weight: 300;
+}
+
+.terms-body h2 {
+	padding: 20px 0;
+}
+
+.terms-body ul li {
+	padding: 5px 0;
+	line-height: 20px;
+}
+
 @media only screen and (max-width: 500px) {
 
 .menu-collapse {
